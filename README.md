@@ -5,14 +5,16 @@ This project is a web-based application that predicts relevant StackOverflow tag
 
 ## 📂 Project Structure
 
+```text
 .
-├── app.ipynb # Web scraping notebook
-├── app1.ipynb # Data cleaning and preprocessing notebook
-├── best.ipynb # Model training and evaluation notebook
-├── best.py # Streamlit web application
-├── cleaned_stackoverflow.csv # Cleaned dataset (generated from notebooks)
-└── README.md # Project documentation
+├── app.ipynb                  # Web scraping notebook
+├── app1.ipynb                 # Data cleaning and preprocessing notebook
+├── best.ipynb                 # Model training and evaluation notebook
+├── best.py                    # Streamlit web application
+├── cleaned_stackoverflow.csv  # Cleaned dataset
+└── README.md                  # Project documentation
 
+```
 ## ⚙️ Setup Instructions (Windows with Conda)
 
 ### 1. Clone the repository
@@ -79,3 +81,10 @@ The app:
   - Accepts a programming question
   
   - Predicts the most relevant tags from top 50 frequent tags
+
+🧠 Model Details
+- Text Features: TF-IDF with bigrams (1–2), 10,000 max features
+
+- Classifier: Logistic Regression with One-vs-Rest strategy
+
+- Labels: Top 50 most common tags from dataset
